@@ -11,4 +11,9 @@ public class DateController {
     public String getCurrentTime() {
         return new DateService().getCurrentTime();
     }
+
+    @GetMapping("/api/date")
+    public String getCurrentDate() {
+        return new DateService().getCurrentDate();
+    }
 }
