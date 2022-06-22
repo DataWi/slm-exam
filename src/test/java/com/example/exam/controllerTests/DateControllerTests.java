@@ -15,6 +15,13 @@ public class DateControllerTests {
     @Test
     public void contextLoads() throws Exception {
         assertThat(dateController).isNotNull();
+        // check if getCurrentTime is not null
+        assertThat(dateController.getCurrentTime()).isNotNull();
+        // check if getCurrentDate is not null
+        assertThat(dateController.getCurrentDate()).isNotNull();
     }
+
+
+
 
 }
