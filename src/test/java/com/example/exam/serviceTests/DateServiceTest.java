@@ -10,10 +10,12 @@ public class DateServiceTest {
     // Check if the current time is correct
     @Test
     public void testGetCurrentTime() {
-        String toTest = String.valueOf(new java.util.Date());
+        String toTest;
         // create a new DateService object
         DateService dateService = new DateService();
-
+        // format toTest as hh:mm:ss
+        java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("hh:mm:ss");
+        toTest = sdf.format(new java.util.Date());
         // Check if current time is correct
         assertEquals(toTest, dateService.getCurrentTime());
     }
@@ -22,7 +24,10 @@ public class DateServiceTest {
     @Test
     public void testGetCurrentDate() {
         // check for date format yyyy-mm-dd
-        String toTest = String.valueOf(new java.util.Date());
+        String toTest;
+        //format toTest to yyyy-mm-dd
+        java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("yyyy-mm-dd");
+        toTest = sdf.format(new java.util.Date());
         // create a new DateService object
         DateService dateService = new DateService();
         // Check if date is correct
@@ -33,7 +38,11 @@ public class DateServiceTest {
     @Test
     public void testGetCurrentDate2() {
         // check for date format yyyy/mm/dd
-        String toTest = String.valueOf(new java.util.Date());
+        String toTest;
+        // format toTest to yyyy/mm/dd
+        java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("yyyy/mm/dd");
+        toTest = sdf.format(new java.util.Date());
+
         // create a new DateService object
         DateService dateService = new DateService();
         // Check if date is correct
